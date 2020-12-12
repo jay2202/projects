@@ -1,0 +1,46 @@
+Introduction:
+
+In this project, I had created a machine learning model to classify a news article in fake or real class with 98% accuracy.
+
+Explain:
+
+Idea: I made this model for Kaggle machine learning competition for which I got rank of 602 in approx 15000 participants.
+ 
+
+Function:- basically this project classifies if a news is fake or real by just giving following inputs:
+1. title(optional)
+2. Author(optional)
+3. Article(mandatory)
+
+Data: I got data from Kaggle website of name Fake news. In the dataset, 4 columns is given those are Id, title,author, article , label.
+
+
+Tools and technologies:-
+
+ Logistic Regression,pandas,Tf-idf Vectorizer, nltk etc.
+ 
+
+At last, I applied logistic regression on my dataset which gives me 98% accuracy which is higher than 2 more models I
+ used on this dataset which are passive aggressive classifier and Random forest classifier.
+
+I had spent across 7 days to build this project because after 10 days end sem is going to start.
+ 
+
+In future, I am thinking to apply NLP on this dataset to improve my accuracy.
+
+ 
+
+challenge:-{
+
+I don't know about NLP at that time, So I had faced problem to convert it into numerical form. So, I found an article on 
+tfifdvectroizer at Kaggle site about how to change a string into numeric table with important words in the string.
+
+}
+
+ 
+
+ 
+
+ 
+
+ 

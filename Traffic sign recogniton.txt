@@ -1,0 +1,56 @@
+Introduction:
+
+In this project, I had created a deep learning model to classify a traffic sign in the image with an accuracy of 95%.
+
+ 
+
+ 
+
+ 
+
+Explain: 
+
+Function:- basically this project classifies name of a traffic sign by processing its images.
+
+ 
+
+Data: I got data from Kaggle website of name german traffic sign recognition benchmark. In the dataset, I got 43 classes of images of 
+traffic signs.
+
+Here I have to first load images into number format for which I used image module of pillow package. I changed every image into a 3 
+channel of 2d list each dimension for the colour value of RGB respectively, which eventually I resized to 3 channel of 30 * 30 format 
+which further I changed into categorical form.
+
+
+
+ 
+
+Tools and technologies:-
+
+pillow,OpenCV, TensorFlow,Keras, etc.
+
+ 
+
+At last, I made a sequential model of neural networks. I trained the model on the numpy array that I had created before.
+ 
+
+I had spent across 5 days to build this project.
+ 
+
+In future, I am going to make this model work on live camera as it sees a sign in camera feed it makes a rectangle on it and 
+specify its name. 
+ 
+
+challenge:-{
+
+I didn't changed my csv file in categorical format which makes my model inefficient as only 70% accuracy is predicting which I
+ increased by converting my class in categorical form.
+}
+
+ 
+
+ 
+
+ 
+
+ 

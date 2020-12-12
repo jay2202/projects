@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "resp",
+  "main": "index.js",
+  "scripts": {
+    "sass": "dart-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "jay",
+  "license": "ISC"
+}

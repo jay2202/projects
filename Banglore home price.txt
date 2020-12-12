@@ -1,0 +1,61 @@
+Introduction:
+this is a   machine learning project which is used to predict price of an apartment by giving fewer details.
+In this model I used linear regression which gives me 93% accuracy.
+
+
+Explain:
+
+Idea: During a competition on Kaggle I seen an article on this dataset which attracted me because this type of project is useful 
+for those who want to buy a new apartment but don't want to be cheated by an agent which can be eventually useful for me if I go to
+ Banglore for the job and I want to buy an apartment.
+
+Function:- basically this project tells the average price of an apartment by taking a few inputs from the user like location, 
+no of bedroom and bathrooms and total sqft of the apartment.
+sw
+Data: I got data from Kaggle website of name Bengaluru home prices. In the dataset, information about the type, location, society, size,
+ no. of bathroom and balcony and price is given.
+
+In the dataset, Data is in raw form means there are many null values, numbers are in string format which I had been changed into an 
+integer with the help of one-hot encoding, integer values in float format.
+
+Here, I had to drop some columns because they are not contributing to prediction like society, availability, area_type etc. 
+
+we have to remove outliers in data like in some row no of the bathroom is greater than no bedrooms, different sqft area for same bhk 
+apartments.
+
+Tools and technologies:-
+
+ LinearRegression,matplotlib, pandas, numpy, etc.
+
+At last, I applied linear regression on my dataset which gives me 93% accuracy which is higher than 2 more models I used on this dataset.
+
+
+
+I had spent across 1 month to build this project in which my seniors had helped me a lot, they explained me about outliers and how to
+ remove those which eventually increases my model accuracy.  
+
+
+
+In future, I am thinking of uploading my model on a website for which I am planning to learn web development.
+
+
+Drawbacks: It will not show the prices for new localities which is not listed on this dataset. For this I am planning to learn web
+ scrapping on it to fetch current data from the internet to make the model updated.
+
+
+
+challenge:-{
+
+Here I get many outliers in data, one of them in sqft area of the apartment ranges for 400-650 sqft for 2bhk apartment which is suspicious,
+ so I researched about this on the Internet in many sites for apartments 1acre.com and many where I got to know that average 2bhk flat is
+ 600sqft. So I had to remove these outliers by taking 300sqft for each bhk. like 4bhk area should be 1200sqft. I used standard deviation 
+and mean to remove outliers by making another column of sqft area per bhk.
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,280 @@
+@import  'config';
+@import  'menu';
+
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+  background-color: $primary-color;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+//heading
+
+h1, h2, h3{
+  margin: 0;
+  font-weight: 400;
+  &.lg-heading{
+    font-size: 6rem;
+  }
+  &.sm-heading{
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2),0.5);
+  }
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+header{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  &.menu-nav{
+    margin: 0rem;
+  }
+}
+
+.text-secondary{
+color: $secondary-color;
+}
+
+main{
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+  .icons{
+    margin-top: 1rem;
+    a{
+      padding: 0.4rem;
+      &:hover{
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+  &#home{
+    overflow: hidden;
+    h1{
+      margin-top: 20vh;
+    }
+  }
+}
+
+
+.about-info{
+  .bioimage{
+    grid-area: bioimage;
+  }
+  
+  .bio{
+    grid-area: bio;
+    line-height: 1.3;
+    font-size: larger;
+  }
+  
+  .job1{grid-area: job1;}
+  
+  .job2{grid-area: job3;}
+  
+  .job3{grid-area: job2;}
+  
+  .job{
+    background-color: lighten($primary-color,5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  
+  }
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+  'bioimage bio bio'
+  'job1 job2 job3';
+  grid-template-columns: repeat(3,1fr);
+  
+
+}
+
+//project
+.projects{
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3,1fr);
+
+  img{
+    width: 100%;
+    border:3px #fff solid;
+    &:hover{
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+//Button styles
+.btn{
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+  &:hover{
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+
+}
+
+.btn-dark{
+  @extend .btn;
+  background: darken($color: $primary-color, $amount: 50);
+  color: #fff;
+}
+.btn-light{
+  @extend .btn;
+  background: lighten($color: $primary-color, $amount: 30);
+  color: #333;
+}
+
+#main-footer{
+  text-align: center;
+  padding: 1rem;
+  background: darken($color: $primary-color, $amount: 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+  .icons a{
+    margin: 0 1rem;
+  }
+}
+
+//contacts
+.boxes{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+margin-top: 1rem;
+div{
+  font-weight: 2rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  @include easeOut;
+  &:hover{
+    padding: 0.5rem 1.5rem;
+    background: $secondary-color;
+    color:set-text-color($secondary-color);
+    span{
+      color: #333
+    }
+  }
+}
+}
+//skill
+.skills{
+align-items: center;
+margin-top: 1rem;
+.skill{
+  font-weight: 2rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+
+  .skill-row{
+    border: 0.1rem solid $primary-color;
+    width: 0%;
+    margin-left: 0;
+    transition: 0.5s;
+  }
+  
+  @include easeOut;
+}
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+.caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  //max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+/* Add Animation */
+.modal-content, .caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: fixed;
+  top: 0;
+  left: 10px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+@import 'mobile';

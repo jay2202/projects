@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root,
+#app {
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(orange, yellow);
+  background-repeat: no-repeat;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#heading {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+
+#inputarea {
+  margin: 0 auto;
+  background-color: rgb(255, 186, 58);
+  outline: none;
+  width: 50%;
+  padding: 0 1rem;
+}
+
+#newiteminput {
+  background-color: rgb(255, 186, 58);
+  border: 2px solid white;
+  outline: none;
+  width: 87%;
+  height: 2rem;
+  border-radius: 25px;
+}
+#newadd {
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  padding: none;
+  background-color: rgb(255, 186, 58);
+}
+
+#todolist {
+  margin: 0 auto;
+  margin-top: 3rem;
+  background-color: orange;
+  height: 35rem;
+  width: 35rem;
+  padding: 2rem 0;
+  font-size: 1rem;
+  overflow: scroll;
+}
+#todolist div {
+  width: 80%;
+  margin: 1rem auto;
+  background-color: white;
+  padding: 0 1rem;
+  margin: none;
+  font-style: italic;
+  cursor: pointer;
+}
+
+#todolist button {
+  height: 100%;
+  padding: none;
+  background-color: white;
+  border: none;
+  margin: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#todoitem {
+  margin: none;
+  padding: none;
+  text-align: left;
+  display: inline-block;
+  width: 93%;
+}
+
+@media only screen and (max-width: 810px) {
+  #heading {
+    font-size: 3rem;
+  }
+  #todolist {
+    width: 25rem;
+    height: 25rem;
+  }
+  #newadd {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #heading {
+    font-size: 2rem;
+  }
+  #todolist {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+#message {
+  text-align: center;
+  display: block;
+  z-index: -1;
+  height: 0.5rem;
+}
